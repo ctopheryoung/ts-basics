@@ -1,4 +1,4 @@
-import houses from "./houses";
+import houses from "./houses.json";
 
 interface House {
   name: string;
@@ -6,17 +6,10 @@ interface House {
 }
 
 interface HouseWithID {
-  name: string;
-  planets: string | string[];
   id: number;
 }
 
 type FilterFunction = (house: House) => boolean;
-
-function findHouses(houses: string): HouseWithID[];
-function findHouses(houses: string, filter: FilterFunction): HouseWithID[];
-function findHouses(houses: House[]): HouseWithID[];
-function findHouses(houses: House[], filter: FilterFunction): HouseWithID[];
 
 function findHouses(
   input: string | House[],
