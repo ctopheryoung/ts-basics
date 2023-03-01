@@ -38,3 +38,5 @@ console.log(myDB.get("foo"));
 const myDB2 = new PersistentMemoryDB();
 myDB2.restoreFromString(saved);
 console.log(myDB2.get("foo"));
+
+export {};
